@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "caramellatte";
+
+  --color-primary: oklch(72% 0.12 55);
+  --color-secondary: oklch(62% 0.08 45);
+  --color-accent: oklch(78% 0.14 75);
+
+}
