@@ -40,8 +40,8 @@ const Navbar = () => {
 //     text: "Contact"
 //   }
 ];
-  return <header className={`w-full transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg' : 'bg-primary backdrop-blur-md'} border-b border-gray-200`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-11/12">
+  return <header className={`fixed top-0 left-0 w-full transition-all duration-300 bg-primary/80 backdrop-blur-md z-50`}>
+      <div className="container mx-auto max-w-11/12">
         <div className="flex h-14 sm:h-16 lg:h-20 items-center justify-between">
           {}
           <div className="flex items-center">
@@ -53,18 +53,18 @@ const Navbar = () => {
 
           {}
           <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
-            {navLinks.map(link => <a key={link.text} href={link.href} className="text-sm lg:text-base font-medium text-black hover:font-bold hover:text-gray-900 transition-colors relative group">
+            {navLinks.map(link => <Link key={link.text} href={link.href} className="text-sm lg:text-base font-medium text-black hover:font-bold hover:text-gray-900 transition-colors relative group">
                 {link.text}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
-              </a>)}
+              </Link>)}
           </nav>
 
           {}
           <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
-            <Link href="/auth/login" className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm text-black font-bold border rounded-md hover:bg-accent hover:border-none transition-all hover:shadow-md">
+            <Link href="/login" className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm text-black font-bold border rounded-md hover:bg-white hover:border-none transition-all hover:shadow-md">
               <span>Login</span>
             </Link>
-            <Link href={"/auth/register"} className="px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-all shadow-sm hover:shadow-lg transform hover:scale-105">
+            <Link href={"/register"} className="px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-all shadow-sm hover:shadow-lg transform hover:scale-105">
               Register
             </Link>
           </div>
@@ -79,17 +79,16 @@ const Navbar = () => {
         <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-1">
-              {navLinks.map(link => <a key={link.text} href={link.href} onClick={() => setIsMenuOpen(false)} className="px-3 py-2.5 text-sm sm:text-base font-medium text-gray-600 dark:text-gray-300 rounded-md hover:bg-gray-100 transition-colors">
+              {navLinks.map(link => <Link key={link.text} href={link.href} onClick={() => setIsMenuOpen(false)} className="px-3 py-2.5 text-sm sm:text-base font-medium text-gray-600 rounded-md hover:bg-gray-100 transition-colors">
                   {link.text}
-                </a>)}
+                </Link>)}
               <div className="pt-4 mt-2 border-t border-gray-200 flex flex-col space-y-2">
-                <a href="#" className="flex items-center justify-center space-x-2 px-3 py-2.5 text-sm font-medium border border-gray-300 rounded-md hover:bg-gray-100 transition-colors">
-                  <span>Resume</span>
-                  <ExternalLink className="h-4 w-4" />
-                </a>
-                <button className="px-3 py-2.5 text-sm font-medium bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-colors">
-                  Hire Me
-                </button>
+                <Link href="/login" className="flex items-center justify-center space-x-2 px-3 py-2.5 text-sm font-medium border border-gray-300 rounded-md hover:bg-gray-100 transition-colors">
+                  <span>Login</span>
+                </Link>
+                <Link href={"/register"} className="px-3 py-2.5 text-sm font-medium bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-colors">
+                  Register
+                </Link>
               </div>
             </div>
           </div>
