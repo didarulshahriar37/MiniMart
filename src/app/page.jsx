@@ -11,9 +11,6 @@ import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
 export default function Home() {
   return (
     <div>
-      <header>
-        <Navbar></Navbar>
-      </header>
       <main className="w-11/12 mx-auto min-h-screen">
         <Hero></Hero>
         <About></About>
@@ -23,9 +20,6 @@ export default function Home() {
         <FAQ></FAQ>
         <NewsLetter></NewsLetter>
       </main>
-      <footer>
-        <Footer></Footer>
-      </footer>
     </div>
   );
 }

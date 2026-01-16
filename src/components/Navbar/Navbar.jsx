@@ -23,7 +23,7 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   const navLinks = [{
-    href: "/Home",
+    href: "/",
     text: "Home"
   }, {
     href: "/items",
