@@ -28,7 +28,7 @@ export default function WhyChooseUs() {
 
     return (
         <div>
-            <h2 className='mt-15 md:mt-20 text-center md:text-4xl text-2xl font-bold mb-10'>Why Choose Us</h2>
+            <h2 className='mt-15 md:mt-40 text-center md:text-4xl text-2xl font-bold mb-10'>Why Choose Us</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {features.map((feature) => (
                     <div

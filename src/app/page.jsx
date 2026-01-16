@@ -1,3 +1,4 @@
+import About from "@/components/About/About";
 import FAQ from "@/components/FAQ/FAQ";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
@@ -12,6 +13,7 @@ export default function Home() {
       </header>
       <main className="w-11/12 mx-auto min-h-screen">
         <Hero></Hero>
+        <About></About>
         <WhyChooseUs></WhyChooseUs>
         <FAQ></FAQ>
       </main>
