@@ -6,9 +6,9 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="max-w-11/12 mx-auto px-20 mt-10 md:mt-40 flex flex-col md:flex-row items-center gap-10">
+    <section className="max-w-11/12 mx-auto md:px-20 mt-10 md:mt-40 flex flex-col md:flex-row items-center gap-10">
       
-      <div className="md:w-1/2 space-y-6">
+      <div className="md:w-1/2 space-y-6 text-center md:text-left">
         <h2 className="text-2xl md:text-4xl font-bold">
           About Us
         </h2>
