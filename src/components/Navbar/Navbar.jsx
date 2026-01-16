@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,8 +47,7 @@ const Navbar = () => {
           {}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2 group">
-              
-              <span className="font-bold text-lg sm:text-xl lg:text-2xl text-gray-900">MiniMart</span>
+              <Image src={"/MiniMart.png"} alt='Logo' width={80} height={20}></Image>
             </Link>
           </div>
 

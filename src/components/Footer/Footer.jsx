@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 function Footer() {
   const navLinks = [{
@@ -33,7 +34,7 @@ function Footer() {
         <div className="mb-6 flex items-center justify-center">
           
           <span className="text-gray-900 text-3xl font-extrabold tracking-wide">
-            MiniMart
+            <Image src={"/MiniMart.png"} alt="Logo" width={100} height={30}></Image>
           </span>
         </div>
 
