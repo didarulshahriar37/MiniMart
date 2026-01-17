@@ -3,6 +3,7 @@ const nextConfig = {
   plugins: {
     '@tailwindcss/postcss': {},
   },
+  
   reactCompiler: true,
 };
 
