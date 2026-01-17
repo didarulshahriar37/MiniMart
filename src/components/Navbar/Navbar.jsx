@@ -13,6 +13,11 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
 
+  const handleLogout = () => {
+    document.cookie = "auth=true; path:/; max-age=0";
+    setLoggedIn(false);
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -81,9 +86,9 @@ const Navbar = () => {
         { }
         <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
           {
-            loggedIn ? <Link href="/login" className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm text-black font-bold border rounded-md hover:bg-white hover:border-none transition-all hover:shadow-md">
+            loggedIn ? <button onClick={handleLogout} className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm text-black font-bold border rounded-md hover:bg-white hover:cursor-pointer hover:border-none transition-all hover:shadow-md">
               <span>Logout</span>
-            </Link> : <>
+            </button> : <>
               <Link href="/login" className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm text-black font-bold border rounded-md hover:bg-white hover:border-none transition-all hover:shadow-md">
                 <span>Login</span>
               </Link>
