@@ -18,6 +18,10 @@ export default function LoginForm() {
         if (email === "admin@minimart.com" && password === "Admin@MiniMart") {
             document.cookie = "auth=true; path=/; max-age=172800";
             router.push("/items");
+            Swal.fire({
+                title: "Logged in Successfully!",
+                icon: "success",
+            });
         }
         else {
             Swal.fire({

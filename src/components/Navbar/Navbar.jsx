@@ -4,10 +4,11 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 const Navbar = () => {
 
   const pathname = usePathname();
+  const router = useRouter();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,6 +17,7 @@ const Navbar = () => {
   const handleLogout = () => {
     document.cookie = "auth=true; path:/; max-age=0";
     setLoggedIn(false);
+    router.push("/login");
   }
 
   useEffect(() => {
