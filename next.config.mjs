@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  plugins: {
-    '@tailwindcss/postcss': {},
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.ibb.co.com",
+      },
+    ],
   },
-  
   reactCompiler: true,
 };
 

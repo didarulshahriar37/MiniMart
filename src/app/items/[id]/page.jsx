@@ -1,5 +1,6 @@
 import { connect } from "@/app/lib/dbConnect";
 import { ObjectId } from "mongodb";
+import Image from "next/image";
 
 export default async function Page({ params }) {
   const { id } = await params;
@@ -12,13 +13,13 @@ export default async function Page({ params }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         
         <div className="w-full h-100 bg-gray-100 rounded-lg flex items-center justify-center">
-          {/* <Image
+          <Image
             src={item.image}
             alt={item.name}
-            fill
+            width={400}
+            height={400}
             className="object-cover rounded-lg"
-          /> */}
-          <span className="text-gray-400">Image Preview</span>
+          />
         </div>
         <div className="space-y-4">
           <h1 className="text-3xl font-bold">{item.name}</h1>

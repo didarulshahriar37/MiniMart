@@ -1,6 +1,6 @@
-// import Image from "next/image";
 import Link from "next/link";
 import { connect } from "../lib/dbConnect";
+import Image from "next/image";
 
 export default async function page() {
   const collection = await connect("items");
@@ -25,12 +25,12 @@ export default async function page() {
             className="rounded-lg p-4 bg-primary/20 shadow-xl hover:shadow-2xl transition-shadow"
           >
             <div className="relative w-full h-48 mb-4">
-              {/* <Image
+              <Image
                 src={item.image}
                 alt={item.name}
                 fill
                 className="object-cover rounded-md"
-              /> */}
+              />
             </div>
 
             <h3 className="text-lg font-semibold mb-1">
