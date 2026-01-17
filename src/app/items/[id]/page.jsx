@@ -1,36 +1,17 @@
 import { connect } from "@/app/lib/dbConnect";
 import { ObjectId } from "mongodb";
 
-export default async function page({ params }) {
-  const { id } = params;
+export default async function Page({ params }) {
+  const { id } = await params;
 
   const collection = await connect("items");
   const item = await collection.findOne({ _id: new ObjectId(id) });
-  console.log(item)
-
-  if (!ObjectId.isValid(id)) {
-    return (
-      <div className="pt-20 text-center text-xl font-semibold">
-        Invalid Item ID
-      </div>
-    );
-  }
-
-  if (!item) {
-    return (
-      <div className="pt-20 text-center text-xl font-semibold">
-        Item not found
-      </div>
-    );
-  }
 
   return (
-    <div className="max-w-11/12 mx-auto px-4 py-20">
+    <div className="max-w-11/12 mx-auto px-4 pt-20 mt-15 mb-15">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         
-        {/* IMAGE SECTION */}
         <div className="w-full h-100 bg-gray-100 rounded-lg flex items-center justify-center">
-          {/* Uncomment when images are ready */}
           {/* <Image
             src={item.image}
             alt={item.name}
@@ -71,7 +52,7 @@ export default async function page({ params }) {
           </div>
 
           <button
-            className="mt-6 px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition"
+            className="mt-6 px-6 py-3 bg-primary text-black font-bold rounded-lg hover:bg-secondary hover:cursor-pointer transition"
           >
             Add to Cart
           </button>

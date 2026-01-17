@@ -13,7 +13,7 @@ export default async function page() {
 
   return (
     <div className="max-w-11/12 mx-auto px-4 py-20">
-      <h2 className="text-center md:text-4xl text-2xl font-bold mt-15 mb-10">
+      <h2 className="text-center md:text-4xl text-2xl font-bold mt-10 mb-10">
         All Items
       </h2>
 
@@ -21,7 +21,7 @@ export default async function page() {
         {safeItems.map(item => (
           <div
             key={item._id}
-            className="border rounded-lg p-4 bg-white hover:shadow-lg transition-shadow"
+            className="rounded-lg p-4 bg-primary/20 shadow-xl hover:shadow-2xl transition-shadow"
           >
             <div className="relative w-full h-48 mb-4">
               {/* <Image
