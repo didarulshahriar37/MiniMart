@@ -13,6 +13,7 @@ export default async function page() {
 
   return (
     <div className="max-w-11/12 mx-auto px-4 py-20">
+      <title>MiniMart | All Items</title>
       <h2 className="text-center md:text-4xl text-2xl font-bold mt-10 mb-10">
         All Items
       </h2>

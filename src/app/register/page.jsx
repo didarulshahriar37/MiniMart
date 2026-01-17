@@ -3,6 +3,7 @@ import Link from 'next/link'
 export default function Register() {
   return (
     <div className='pt-20'>
+      <title>MiniMart | Register</title>
       <h2 className='md:text-4xl text-2xl font-bold text-center mt-10'>CREATE A NEW ACCOUNT</h2>
       <div className='py-20'>
         <div className="card bg-base-300 mx-auto w-full max-w-sm shrink-0 shadow-2xl">
